@@ -1,0 +1,196 @@
+{
+  "version": 1.0,
+  "title": "Assignment 9: For Loops",
+  "quiz": [
+    {
+      "question": "What code block when used in this `for` loop would make these loops equivalent?\n```cpp\nint i = 0;\nwhile (i <= 10) {\n  cout << \"i is: \" << i << endl;\n  i = i + 3;\n}\n```\n\n```cpp\nfor(/* code block here */) {\n  cout << \"i is: \" << i << endl;\n}\n```",
+      "options": [
+        {
+          "value": "`int i = 0; i <= 10; i++`",
+          "answer": false,
+          "explanation": "`i++` is equivalent to `i = i + 1`. The `while` loop isn't incremeneting by 1!"
+        },
+        {
+          "value": "`int i = 0; i = i + 3; i <= 10`",
+          "answer": false,
+          "explanation": "While this line contains all the correct components they are out of order. The order must be decleration, conditional, and then incrementation."
+        },
+        {
+          "value": "`int i = 10; i < 10; i = i++`",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "`int i = 0; i <= 10; i += 3`",
+          "answer": true,
+          "explanation": "Correct! The three crucial parts of the loop are the decleration `int i = 0`, the conditional `i <= 10`, and the incrementation `i += 3`. This is the only one that contains all of them in the correct order."
+        }
+      ]
+    },
+    {
+      "question": "How many lines will be printed out by this program?\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  for (int i = 0; i < 12; i++) {\n    cout << i << endl;\n  }\n}\n```",
+      "options": [
+        {
+          "value": "10",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "11",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "12",
+          "answer": true,
+          "explanation": "Correct! The loop will run until `i == 12` as then the terminal condition of `i < 12` will no longer be true. Since `i` starts at `0` and is incremented by one each loop it will run 12 times."
+        },
+        {
+          "value": "13",
+          "answer": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "question": "What will be the last line printed out by this program?\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  for (int i = 0; i < 12; i++) {\n    cout << i << endl;\n  }\n}\n```",
+      "options": [
+        {
+          "value": "10",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "11",
+          "answer": true,
+          "explanation": "Correct! Once `i == 12`, the terminal condition of `i < 12` will no longer be true and the `for` block of `cout << i << endl` will not execute. Hence, the last value for `i` that will execute the for block is `i == 11`."
+        },
+        {
+          "value": "12",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "13",
+          "answer": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "question": "How many times will this `for` loop run?\n```cpp\nfor (int i = 0; i < 50; i++) {\n  cout << i << endl;\n  i++\n}\n```",
+      "options": [
+        {
+          "value": "0",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "25",
+          "answer": true,
+          "explanation": "Correct! Because the extra increment in the for loop means that each time the code block is executed `i` is being increased by 2 instead of just 1. While this code \"works\", its is confusing code, and hence bad practice that should not be replicated!\n```cpp\n// A much more readable version of that code.\nfor (int i = 0; i < 50; i += 2) {\n  cout << i << endl;\n}\n```"
+        },
+        {
+          "value": "50",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "infinte",
+          "answer": false,
+          "explanation": ""
+        }
+      ]
+    }
+  ],
+  "fix_code": [
+    {
+      "question": "This code isn't formatted correctly! Can you help fix it?",
+      "hints": [
+        {
+          "line_number": 6,
+          "hint": "Even in a `for` statement there should be spaces around the operatos."
+        },
+        {
+          "line_number": 7,
+          "hint": "And `endl` will make this much more clear to read."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 7,
+          "hint": "It's easy to see what the program is doing as the author of the code. Try giving a user a prompt before asking for input."
+        },
+        {
+          "line_number": 9,
+          "hint": "Loop counters must be also have types when declared."
+        },
+        {
+          "line_number": 9,
+          "hint": "Did you actually print out the right number of numbers? Check for an off by 1 error!"
+        }
+      ]
+    },
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 9,
+          "hint": "The `for` loop counters are only in scope within the loop. Consider using a new variable to act as terminal condition for the loop."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't running correctly! Can you help fix it? Be sure to also address any formatting or syntax errors.",
+      "hints": [
+        {
+          "line_number": 7,
+          "hint": "Assigning to the loop counter in the loop can cause your loop to behave badly."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't running correctly! Can you help fix it? Be sure to also address any formatting or syntax errors.",
+      "hints": [
+        {
+          "line_number": -1,
+          "hint": "Even numbers are numbers which divide evenly by `2`."
+        },
+        {
+          "line_number": -1,
+          "hint": "Can the `%` operator help?"
+        }
+      ]
+    },
+    {
+      "question": "This code isn't running correctly! Can you help fix it? Be sure to also address any formatting or syntax errors.",
+      "hints": [
+        {
+          "line_number": -1,
+          "hint": "Try using an online calculator to check your results!"
+        },
+        {
+          "line_number": -1,
+          "hint": "Types are very annoying when writing code. Sometimes, its easy to forget that with large numbers you need different types and factorials get rather large rather quick!"
+        },
+        {
+          "line_number": -1,
+          "hint": "Can you use a `for` loop here to reduce duplicate code?"
+        }
+      ]
+    }
+  ],
+  "invent_code": [
+    {
+      "question": "For this exercise write a program to print out the first n numbers of the Fibonacci sequence, where n is input by the user.\n\nThe 0th Fibonacci number is `0`, the 1st Fibonacci number is `1`.\n\nFrom there every next Fibonacci number is the previous 2 added together.\nSo, the 2nd Fibonacci number is the `0th + 1st` or `0 + 1`, which is `1`.\nThe 3rd Fibonacci number is the `1st + 2nd` or `1 + 1`, which is `2`.\nAnd so on and so on.\n\nExample: Input `4` would print out `0 1 1 2`.\n\nExample: Input `8` would print out `0 1 1 2 3 5 8 13`",
+      "hints": []
+    },
+    {
+      "question": "Convert the following code from a `while` loop to a `for` loop where it makes sense.\n\n**Bonus Question** What does it mean to be a `Magic Number`? If you figure this out, see if you can change the function name.",
+      "hints": []
+    }
+  ]
+}
